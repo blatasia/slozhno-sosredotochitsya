@@ -2,4 +2,195 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: 'IBM Plex Mono', sans-serif;
+  background-color: var(--bg-color);
+  display: grid;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  position: relative;
+}
+
+.header__decor {
+  display: flex;
+  position: absolute;
+}
+
+.header__theme-menu {
+  display: grid;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 13px;
+  align-content: center;
+}
+
+.header__theme-menu-button {
+  background: transparent;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);;
+  font-family: 'IBM Plex Mono', sans-serif;
+  line-height: 18px;
+  border: none;
+  padding: 3px 12px;
+}
+
+.header__theme-menu-button:hover {
+  border: 0.5px solid var(--accent-color, #ff0070);
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color, #ff0070);
+  display: inline-block;
+  pointer-events: none;
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--header-color);
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 82.5%;
+  display: grid;
+}
+
+.header__title::before {
+  content: " ";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.header__title::after {
+  content: " ";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.header__description {
+  background-color: var(--accent-color, #ff0070);
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  color: var(--bg-color, #000028);
+  font-weight: 700;
+  line-height: 130%;
+  display: grid;
+  justify-self: end;
+}
+
+.main {
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-family: 'IBM Plex Mono', sans-serif;
+  background-color: var(--bg-color, #000028);
+  display: grid;
+}
+
+section {
+  display: grid;
+}
+
+.section__title {
+  color: var(--accent-color, #FF0070);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.section__list {
+  display: grid;
+}
+
+.section__list-item {
+  display: grid;
+}
+
+.section__list-item-title, .section__list-image-title {
+  font-family: inherit;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  color: var(--bg-color, #000028);
+  background-color: var(--accent-color, #ff0070);
+  line-height: 130%;
+}
+
+.section__list-item-title {
+  height: 23px;
+}
+
+.section__list-item-text {
+  line-height: 130%;
+}
+
+.section__subtitle {
+  font-family: inherit;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 130%;
+  font-weight: 700;
+  color: var(--bg-color, #000028);
+  background-color: var(--accent-color, #FF0070);
+}
+
+.section__images {
+  display: grid;
+}
+
+.section__list-image {
+  display: grid;
+}
+
+.section__list-item-image {
+ inline-size: inherit;
+}
+
+.section__list-item-image img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.text__accent {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text__accent:hover {
+  border-block-end: 1px solid var(--text-color, #F1B2CE);
+}
+
+.text__accent:focus {
+  border: 1px solid var(--text-color, #F1B2CE);
+}
+
+.footer {
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.footer::before {
+  content: " ";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.footer::after {
+  content: " ";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.footer__text {
+  font-family: inherit;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  display: grid;
+  color: var(--header-color, #db00ff);
 }
