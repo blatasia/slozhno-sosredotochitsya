@@ -304,7 +304,6 @@
   }
 
   .header__title {
-    align-items: end;
     align-items: center;
     margin-inline-start: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
