@@ -58,8 +58,13 @@
 .section__title,
 .section__list,
 .section__list-item-title,
-.section__list-image-title {
+.section__list-image-title,
+.section__subtitle {
   color: var(--text-color, #353430);
+}
+
+section:nth-child(3) .section__list-item-title {
+  font-weight: 400;
 }
 
 .text__accent:hover {
