@@ -1,21 +1,16 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: 'IBM Plex Mono', sans-serif;
-  background-color: var(--bg-color);
   display: grid;
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex Mono", sans-serif;
+  background-color: var(--bg-color);
 }
 
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
-  position: relative;
-}
-
-.header__decor {
-  display: flex;
-  position: absolute;
 }
 
 .header__theme-menu {
@@ -24,19 +19,19 @@
 
 .header__theme-menu-list {
   display: grid;
-  gap: 13px;
   align-content: center;
+  gap: 13px;
 }
 
 .header__theme-menu-button {
-  background: transparent;
-  color: var(--accent-color);
-  text-transform: lowercase;
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);;
-  font-family: 'IBM Plex Mono', sans-serif;
-  line-height: 18px;
   border: none;
   padding: 3px 12px;
+  color: var(--accent-color);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 18px;
+  text-transform: lowercase;
+  background: transparent;
 }
 
 .header__theme-menu-button:hover {
@@ -48,18 +43,18 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color, #ff0070);
   display: inline-block;
+  outline: 1px solid var(--accent-color, #ff0070);
   pointer-events: none;
 }
 
 .header__title {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  display: grid;
   color: var(--header-color);
   font-family: inherit;
   font-weight: 700;
   line-height: 82.5%;
-  display: grid;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__title::before {
@@ -77,21 +72,21 @@
 }
 
 .header__description {
-  background-color: var(--accent-color, #ff0070);
-  font-family: 'IBM Plex Mono', sans-serif;
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  color: var(--bg-color, #000028);
-  font-weight: 700;
-  line-height: 130%;
   display: grid;
   justify-self: end;
+  color: var(--bg-color, #000028);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 130%;
+  background-color: var(--accent-color, #ff0070);
 }
 
 .main {
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  font-family: 'IBM Plex Mono', sans-serif;
-  background-color: var(--bg-color, #000028);
   display: grid;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  background-color: var(--bg-color, #000028);
 }
 
 section {
@@ -99,10 +94,10 @@ section {
 }
 
 .section__title {
-  color: var(--accent-color, #FF0070);
+  color: var(--accent-color, #ff0070);
   font-family: inherit;
-  font-size: inherit;
   font-weight: 700;
+  font-size: inherit;
   line-height: 130%;
 }
 
@@ -114,12 +109,13 @@ section {
   display: grid;
 }
 
-.section__list-item-title, .section__list-image-title {
+.section__list-item-title,
+.section__list-image-title {
+  color: var(--bg-color, #000028);
   font-family: inherit;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  color: var(--bg-color, #000028);
-  background-color: var(--accent-color, #ff0070);
   line-height: 130%;
+  background-color: var(--accent-color, #ff0070);
 }
 
 .section__list-item-title {
@@ -131,12 +127,12 @@ section {
 }
 
 .section__subtitle {
+  color: var(--bg-color, #000028);
   font-family: inherit;
+  font-weight: 700;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 130%;
-  font-weight: 700;
-  color: var(--bg-color, #000028);
-  background-color: var(--accent-color, #FF0070);
+  background-color: var(--accent-color, #ff0070);
 }
 
 .section__images {
@@ -148,7 +144,7 @@ section {
 }
 
 .section__list-item-image {
- inline-size: inherit;
+  inline-size: inherit;
 }
 
 .section__list-item-image img {
@@ -161,17 +157,17 @@ section {
 }
 
 .text__accent:hover {
-  border-block-end: 1px solid var(--text-color, #F1B2CE);
+  border-block-end: 1px solid var(--text-color, #f1b2ce);
 }
 
 .text__accent:focus {
-  border: 1px solid var(--text-color, #F1B2CE);
+  border: 1px solid var(--text-color, #f1b2ce);
 }
 
 .footer {
+  position: relative;
   display: grid;
   place-content: center;
-  position: relative;
 }
 
 .footer::before {
@@ -189,8 +185,8 @@ section {
 }
 
 .footer__text {
-  font-family: inherit;
-  text-shadow: 4px 4px 0 var(--accent-color);
   display: grid;
   color: var(--header-color, #db00ff);
+  font-family: inherit;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }

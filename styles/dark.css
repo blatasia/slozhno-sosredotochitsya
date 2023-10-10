@@ -5,13 +5,13 @@
 */
 
 :root {
-  --accent-color: #FF0070;
+  --accent-color: #ff0070;
 
-  --text-color:  #F1B2CE;
-  
+  --text-color: #f1b2ce;
+
   --bg-color: #000028;
 
-  --header-color: #DB00FF;
+  --header-color: #db00ff;
 }
 
 .page.theme_dark {
@@ -24,33 +24,88 @@
   background-attachment: fixed;
 }
 
+.header__decor {
+  position: absolute;
+  display: flex;
+}
+
+.header__decor::before {
+  content: "REC";
+  color: var(--accent-color, #ff0070);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 25px;
+}
+
+.header__decor::after {
+  content: " ";
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 4px rgba(255, 0, 112, 1);
+  color: var(--accent-color, #ff0070);
+  background-color: var(--accent-color, #ff0070);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__title::before {
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+}
+
+.header__title::after {
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.header__description {
+  color: var(--bg-color, #000028);
+}
+
+.text__accent:hover {
+  border-block-end: 1px solid var(--text-color, #f1b2ce);
+}
+
+.text__accent:focus {
+  border: 1px solid var(--text-color, #f1b2ce);
+}
+
+.footer::before {
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+}
+
+.footer::after {
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+}
+
 @media (preferes-color-scheme: dark) {
   .header__decor::before {
     content: "REC";
+    color: var(--accent-color, #ff0070);
     font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-    color: var(--accent-color, #FF0070);
     line-height: 25px;
   }
 
   .header__decor::after {
     content: " ";
     position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 4px rgba(255, 0, 112, 1);
+    color: var(--accent-color, #ff0070);
+    background-color: var(--accent-color, #ff0070);
     inline-size: 9px;
     block-size: 9px;
-    color: var(--accent-color, #FF0070);
-    background-color: var(--accent-color, #FF0070);
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 4px rgba(255,0,112,1);
   }
 
   .header__title::before {
-    border-block-start: 1px solid var(--accent-color, #ff0070);
     border-inline-end: 1px solid var(--accent-color, #ff0070);
+    border-block-start: 1px solid var(--accent-color, #ff0070);
   }
 
   .header__title::after {
-    border-block-end: 1px solid var(--accent-color, #ff0070);
     border-inline-start: 1px solid var(--accent-color, #ff0070);
+    border-block-end: 1px solid var(--accent-color, #ff0070);
   }
 
   .header__description {
@@ -58,20 +113,20 @@
   }
 
   .text__accent:hover {
-    border-block-end: 1px solid var(--text-color, #F1B2CE);
+    border-block-end: 1px solid var(--text-color, #f1b2ce);
   }
-  
+
   .text__accent:focus {
-    border: 1px solid var(--text-color, #F1B2CE);
+    border: 1px solid var(--text-color, #f1b2ce);
   }
 
   .footer::before {
-    border-block-start: 1px solid var(--accent-color, #ff0070);
     border-inline-end: 1px solid var(--accent-color, #ff0070);
+    border-block-start: 1px solid var(--accent-color, #ff0070);
   }
 
   .footer::after {
-    border-block-end: 1px solid var(--accent-color, #ff0070);
     border-inline-start: 1px solid var(--accent-color, #ff0070);
+    border-block-end: 1px solid var(--accent-color, #ff0070);
   }
 }

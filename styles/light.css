@@ -4,10 +4,11 @@
   переключая тему
 */
 :root {
-  --accent-color: #FF8DCB;
+  --accent-color: #ff8dcb;
   --text-color: #353430;
-  --bg-color: #FFF1F7;
-  --header-color: #FFC2E6;
+  --bg-color: #fff1f7;
+  --header-color: #ffc2e6;
+  --shadow-color: #ff0070;
 }
 
 .page.theme_light {
@@ -16,117 +17,142 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   background: url(../images/cover-image-light.png), center / cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-:root {
-  --accent-color: #FF8DCB;
-  --text-color: #353430;
-  --bg-color: #FFF1F7;
-  --header-color: #FFC2E6;
+
+.header__title::before {
+  border-inline-end: 1px solid var(--text-color, #353430);
+  border-block-start: 1px solid var(--text-color, #353430);
+}
+
+.header__title::after {
+  border-inline-start: 1px solid var(--text-color, #353430);
+  border-block-end: 1px solid var(--text-color, #353430);
+}
+
+.header__decor {
+  display: none;
+}
+
+.header__description {
+  color: var(--text-color, #353430);
+}
+
+.header__theme-menu-button {
+  color: var(--text-color, #353430);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--text-color, #353430);
+}
+
+.header__theme-menu-button:hover {
+  border: 0.5px solid var(--text-color, #353430);
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--text-color, #353430);
+}
+
+.section__title,
+.section__list,
+.section__list-item-title,
+.section__list-image-title {
+  color: var(--text-color, #353430);
+}
+
+.text__accent:hover {
+  border-block-end: 1px solid var(--text-color, #353430);
+}
+
+.text__accent:focus {
+  border: 1px solid var(--text-color, #353430);
+}
+
+.footer::before {
+  border-inline-end: 1px solid var(--text-color, #353430);
+  border-block-start: 1px solid var(--text-color, #353430);
+}
+
+.footer::after {
+  border-inline-start: 1px solid var(--text-color, #353430);
+  border-block-end: 1px solid var(--text-color, #353430);
+}
+
+@media (preferes-color-scheme: light) {
+  .page {
+    background: url(../images/cover-image-light.png), center / cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .header__title::before {
-    border-block-start: 1px solid var(--text-color, #353430);
     border-inline-end: 1px solid var(--text-color, #353430);
+    border-block-start: 1px solid var(--text-color, #353430);
   }
 
   .header__title::after {
-    border-block-end: 1px solid var(--text-color, #353430);
     border-inline-start: 1px solid var(--text-color, #353430);
+    border-block-end: 1px solid var(--text-color, #353430);
+  }
+
+  .header__decor {
+    display: none;
   }
 
   .header__description {
     color: var(--text-color, #353430);
   }
 
+  .header__theme-menu-button {
+    color: var(--text-color, #353430);
+  }
+
+  .header__theme-menu-button_active {
+    outline: 1px solid var(--text-color, #353430);
+  }
+
   .header__theme-menu-button:hover {
     border: 0.5px solid var(--text-color, #353430);
   }
-  
+
   .header__theme-menu-button:focus {
     border-block-end: 1px solid var(--text-color, #353430);
   }
-  
+
+  .section__title,
+  .section__list,
+  .section__list-item-title,
+  .section__list-image-title {
+    color: var(--text-color, #353430);
+  }
+
   .text__accent:hover {
     border-block-end: 1px solid var(--text-color, #353430);
   }
-  
+
   .text__accent:focus {
     border: 1px solid var(--text-color, #353430);
   }
 
   .footer::before {
-    border-block-start: 1px solid var(--text-color, #353430);
     border-inline-end: 1px solid var(--text-color, #353430);
+    border-block-start: 1px solid var(--text-color, #353430);
   }
 
   .footer::after {
-    border-block-end: 1px solid var(--text-color, #353430);
     border-inline-start: 1px solid var(--text-color, #353430);
+    border-block-end: 1px solid var(--text-color, #353430);
+  }
+}
+
+@media (width > 1023px) and (width < 1440px) {
+  .header__title {
+    text-shadow: 4px 4px 0 var(--shadow-color, #ff0070);
   }
 
-
-
-@media (preferes-color-scheme: light) {
-  .page {
-    background: url(../images/cover-image-light.png), center / cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  .footer__text {
+    text-shadow: 4px 4px 0 var(--shadow-color, #ff0070);
   }
-
-    .header__title::before {
-      border-block-start: 1px solid var(--text-color, #353430);
-      border-inline-end: 1px solid var(--text-color, #353430);
-    }
-  
-    .header__title::after {
-      border-block-end: 1px solid var(--text-color, #353430);
-      border-inline-start: 1px solid var(--text-color, #353430);
-    }
-  
-    .header__decor {
-      display: none;
-      opacity: 0;
-    }
-
-    .header__decor::after {
-      opacity: 0;
-    }
-
-    .header__decor::before {
-      opacity: 0;
-    }
-
-    .header__description {
-      color: var(--text-color, #353430);
-    }
-  
-    .header__theme-menu-button:hover {
-      border: 0.5px solid var(--text-color, #353430);
-    }
-    
-    .header__theme-menu-button:focus {
-      border-block-end: 1px solid var(--text-color, #353430);
-    }
-    
-    .text__accent:hover {
-      border-block-end: 1px solid var(--text-color, #353430);
-    }
-    
-    .text__accent:focus {
-      border: 1px solid var(--text-color, #353430);
-    }
-  
-    .footer::before {
-      border-block-start: 1px solid var(--text-color, #353430);
-      border-inline-end: 1px solid var(--text-color, #353430);
-    }
-  
-    .footer::after {
-      border-block-end: 1px solid var(--text-color, #353430);
-      border-inline-start: 1px solid var(--text-color, #353430);
-    }
-  }
-
-  
+}
