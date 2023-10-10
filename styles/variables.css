@@ -11,29 +11,6 @@
   --header-color: #db00ff;
 }
 
-.page {
-  background: url(../images/cover-image-dark.png), center / cover no-repeat;
-  background-attachment: fixed;
-}
-
-/* .header__decor::before {
-  content: "REC";
-  color: var(--accent-color, #ff0070);
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  line-height: 25px;
-}
-
-.header__decor::after {
-  content: " ";
-  position: absolute;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 4px rgba(255, 0, 112, 1);
-  color: var(--accent-color, #ff0070);
-  background-color: var(--accent-color, #ff0070);
-  inline-size: 9px;
-  block-size: 9px;
-}  */
-
 .header__title::before {
   border-inline-end: 1px solid var(--accent-color, #ff0070);
   border-block-start: 1px solid var(--accent-color, #ff0070);
