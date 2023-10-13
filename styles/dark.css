@@ -19,11 +19,13 @@
   --decor-color: #ff0070;
   --title-color: #000028;
   --text-shadow-color: #ff0070;
+  --section-title-color: #ff0070;
   background: url(../images/cover-image-dark.png), center/cover, no-repeat;
   background-attachment: fixed;
+  backdrop-filter: opacity(0.5);
 }
 
-@media (preferes-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --font: "IBM Plex Mono", monospace;
     --text-color: #f1b2ce;
@@ -35,5 +37,22 @@
     --decor-color: #ff0070;
     --title-color: #000028;
     --text-shadow-color: #ff0070;
+    --section-title-color: #ff0070;
+  }
+
+  .page {
+    background: url(../images/cover-image-dark.png), center/cover, no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: opacity(0.5);
+  }
+}
+
+@media (width < 1024px) {
+  .page.theme_dark .header .header__title {
+    --shadow-color: #ff0070;
+  }
+
+  .page.theme_dark .footer .footer__text {
+    --shadow-color: #ff0070;
   }
 }

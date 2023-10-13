@@ -24,13 +24,21 @@
   background-color: var(--bg-color, #fff1f7);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  backdrop-filter: opacity(0.5);
 }
 
 .page.theme_light .header .header__decor {
   display: none;
 }
 
-@media (preferes-color-scheme: light) {
+@media (width < 1024px) {
+  .page.theme_light {
+    --shadow-color: #ff0070;
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
   :root {
     --font: "IBM Plex Mono", monospace;
     --text-color: #353430;
@@ -44,14 +52,36 @@
     --title-color: #353430;
     --text-shadow-color: #ff8dcb;
   }
-}
 
-@media (width = 1024px) {
-  .header__title {
-    --shadow-color: #ff0070;
+  .page {
+    background: url(../images/cover-image-light.png), center / cover;
+    background-color: var(--bg-color, #fff1f7);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: opacity(0.5);
   }
 
-  .footer__text {
-    --shadow-color: #ff0070;
+  .page .header .header__decor {
+    display: none;
+  }
+
+  @media (width < 1024px) {
+    .page .header .header__title {
+      --shadow-color: #ff8dcb;
+    }
+  
+    .page .footer .footer__text {
+      --shadow-color: #ff8dcb;
+    }
+  }
+}
+
+@media (width < 1024px) {
+  .page.theme_light .header .header__title {
+    --shadow-color: #ff8dcb;
+  }
+
+  .page.theme_light .footer .footer__text {
+    --shadow-color: #ff8dcb;
   }
 }
