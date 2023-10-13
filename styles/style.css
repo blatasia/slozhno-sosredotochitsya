@@ -7,8 +7,8 @@
   font-family: var(--font);
   background: url(../images/cover-image-dark.png), center, no-repeat;
   background-attachment: fixed;
-  max-inline-size: 1024px;
   backdrop-filter: opacity(0.5);
+  max-inline-size: 1024px;
 }
 
 .header {
@@ -64,7 +64,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 0.5px solid var(--button-color); 
+  outline: 0.5px solid var(--button-color);
 }
 
 .header__theme-menu-button:focus {
@@ -401,7 +401,6 @@
 
   .main__section-list-image-title {
     grid-column: 1/3;
-    margin-block-start: 3px;
   }
 
   .main__section-list-image {
