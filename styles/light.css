@@ -37,8 +37,17 @@
   }
 }
 
-
 @media (prefers-color-scheme: light) {
+
+  @media (width < 1024px) {
+    .page .header .header__title {
+      --shadow-color: #ff8dcb;
+    }
+
+    .page .footer .footer__text {
+      --shadow-color: #ff8dcb;
+    }
+  }
   :root {
     --font: "IBM Plex Mono", monospace;
     --text-color: #353430;
@@ -63,16 +72,6 @@
 
   .page .header .header__decor {
     display: none;
-  }
-
-  @media (width < 1024px) {
-    .page .header .header__title {
-      --shadow-color: #ff8dcb;
-    }
-  
-    .page .footer .footer__text {
-      --shadow-color: #ff8dcb;
-    }
   }
 }
 
