@@ -5,8 +5,11 @@
   display: grid;
   margin: auto;
   font-family: var(--font);
-  background: url(../images/cover-image-dark.png), center, no-repeat;
-  background-attachment: fixed;
+  background: url(../images/cover-image-dark.png);
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;;
   backdrop-filter: opacity(0.5);
   max-inline-size: 1024px;
 }

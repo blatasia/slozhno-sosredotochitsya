@@ -20,7 +20,10 @@
   --title-color: #000028;
   --text-shadow-color: #ff0070;
   --section-title-color: #ff0070;
-  background: url(../images/cover-image-dark.png), center/cover, no-repeat;
+  background: url(../images/cover-image-dark.png);
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   backdrop-filter: opacity(0.5);
 }

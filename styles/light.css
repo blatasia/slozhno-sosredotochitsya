@@ -63,8 +63,10 @@
   }
 
   .page {
-    background: url(../images/cover-image-light.png), center / cover;
+    background: url(../images/cover-image-light.png);
     background-color: var(--bg-color, #fff1f7);
+    object-fit: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: opacity(0.5);
