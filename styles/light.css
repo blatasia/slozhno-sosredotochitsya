@@ -22,12 +22,10 @@
   --text-shadow-color: #ff8dcb;
   background: url(../images/cover-image-light.png);
   background-color: var(--bg-color, #fff1f7);
-  object-fit: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
-  backdrop-filter: opacity(0.5);
-  background-size: 100%;
 }
 
 .page.theme_light .header .header__decor {
@@ -68,12 +66,11 @@
   .page {
     background: url(../images/cover-image-light.png);
     background-color: var(--bg-color, #fff1f7);
-    object-fit: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     backdrop-filter: opacity(0.5);
-    background-size: 100%;
   }
 
   .page .header .header__decor {
