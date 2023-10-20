@@ -26,6 +26,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   backdrop-filter: opacity(0.5);
+  background-size: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,9 +45,13 @@
   }
 
   .page {
-    background: url(../images/cover-image-dark.png), center/cover, no-repeat;
+    background: url(../images/cover-image-dark.png);
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: opacity(0.5);
+    background-size: 100%;
   }
 }
 
